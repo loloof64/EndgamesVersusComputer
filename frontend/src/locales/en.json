@@ -1,0 +1,143 @@
+{
+    "menu": {
+        "newGame": {
+            "tooltip": "Start a new game"
+        },
+        "toggleSide": {
+            "tooltip": "Reverse the board side"
+        },
+        "stopGame": {
+            "tooltip": "Stop current game"
+        },
+        "save": {
+            "tooltip": "Save current game"
+        },
+        "settings": {
+            "tooltip": "Access the settings"
+        }
+    },
+    "app": {
+        "title": "Endgames versus Computer"
+    },
+    "modals": {
+        "global": {
+            "okButton": "Ok",
+            "cancelButton": "Cancel"
+        },
+        "settings": {
+            "title": "Settings",
+            "loadDefaults": "Load default settings",
+            "failedLoadingDefaultSettingsTitle": "Failed to load default settings",
+            "failedLoadingDefaultSettingsText": "Failed to load default settings",
+            "modifyColor": "Modify",
+            "acceptColor": "Accept",
+            "configureEngine": "Select UCI engine",
+            "failedToSetupEngineTitle": "Could not select this engine",
+            "failedToSetupEngineText": "Failed to select the engine : have you got the access rights for it ?",
+            "failedToSaveTitle": "Failed to save",
+            "failedToSaveText": "Failed to save the settings",
+            "boardBackgroundColor": "board background color",
+            "boardCoordinatesColor": "board coordinates color",
+            "boardLastMoveArrowColor": "board last move arrow color",
+            "boardWhiteCellsColor": "board white cells color",
+            "boardBlackCellsColor": "board black cells color",
+            "boardDndStartCellColor": "board Drag and Drop start cell color",
+            "boardDndEndCellColor": "board Drag and Drop end cell color",
+            "boardDndSCrossColor": "board Drag and Drop end cell color",
+            "selectedEngine": "Selected engine: ",
+            "noEngine": "no engine",
+            "coordinatesVisible": "Show coordinates",
+            "lastMoveArrowVisible": "Show last move arrow",
+            "playerName": "Player name: ",
+            "computerName": "Computer name: ",
+            "engineDepth": "Engine depth"
+        },
+        "promotion": {
+            "title": "Select the promotion piece"
+        },
+        "engineCouldNotPlay": {
+            "engineNotSet": {
+                "title": "Could not make then engine play",
+                "text": "You forgot to set up an UCI engine first."
+            },
+            "computationError": {
+                "title": "Could not make then engine play",
+                "text": "An misc. error has occured : is the given position legal and did you really select an uci engine ?"
+            }
+        },
+        "newGame": {
+            "title": "Quit current game ?",
+            "text": "Do you really want to start a new game and stop this one ?"
+        },
+        "stopGame": {
+            "title": "Quit current game ?",
+            "text": "Do you really want to stop current game ?"
+        },
+        "failedToReadPgn": {
+            "title": "Error reading PGN",
+            "text": "Failed to read the given PGN"
+        },
+        "invalidPgn": {
+            "title": "Error reading PGN",
+            "text": "The given PGN is not valid"
+        },
+        "saveSuccess": {
+            "title": "Game saved",
+            "text": "Game saved with success"
+        },
+        "saveError": {
+            "title": "Save error",
+            "text": "Error saving game"
+        },
+        "saveClosingError": {
+            "title": "Error closing file",
+            "text": "Failed to close file"
+        },
+        "noGameInPgn": {
+            "title": "Could not load game",
+            "text": "No game in the selected pgn"
+        },
+        "pgnSelection": {
+            "title": "Select the position"
+        }
+    },
+    "game": {
+        "ended": {
+            "checkmate": "{winner} won by checkmate.",
+            "stalemate": "Stalemate.",
+            "perpetualDraw": "Three-fold repetitions draw.",
+            "missingMaterial": "Draw by missing material.",
+            "fiftyMovesRule": "Draw by the 50-moves rule."
+        },
+        "side": {
+            "white": "White",
+            "black": "Black"
+        },
+        "status": {
+            "started": "New game started.",
+            "stopped": "Current game stopped.",
+            "already_finished": "Game already finished."
+        }
+    },
+    "history": {
+        "header": {
+            "moveNumber": "Number",
+            "whiteSide": "White",
+            "blackSide": "Black"
+        },
+        "buttons": {
+            "first": "First position",
+            "previous": "Previous position",
+            "next": "Next position",
+            "last": "Last position"
+        }
+    },
+    "pgn": {
+        "buttons": {
+            "first": "First game",
+            "previous": "Previous game",
+            "next": "Next game",
+            "last": "Last game"
+        }
+    }
+}

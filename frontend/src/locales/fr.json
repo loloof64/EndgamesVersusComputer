@@ -1,0 +1,143 @@
+{
+    "menu": {
+        "newGame": {
+            "tooltip": "Démarrer une nouvelle partie"
+        },
+        "toggleSide": {
+            "tooltip": "Retourner l'échiquier"
+        },
+        "stopGame": {
+            "tooltip": "Interrompre la partie en cours"
+        },
+        "save": {
+            "tooltip": "Sauvegardie la partie"
+        },
+        "settings": {
+            "tooltip": "Accéder aux paramètres"
+        }
+    },
+    "app": {
+        "title": "Endgames versus Computer"
+    },
+    "modals": {
+        "global": {
+            "okButton": "D'accord",
+            "cancelButton": "Annuler"
+        },
+        "settings": {
+            "title": "Paramètres",
+            "loadDefaults": "Charger les paramètres par défaut",
+            "failedLoadingDefaultSettingsTitle": "Echec de chargement des paramètres par défaut",
+            "failedLoadingDefaultSettingsText": "Echec de chargement des paramètres par défaut",
+            "modifyColor": "Changer",
+            "acceptColor": "Accepter",
+            "configureEngine": "Choisir le moteur UCI",
+            "failedToSetupEngineTitle": "Echec de sélection du moteur",
+            "failedToSetupEngineText": "Echec de sélection du moteur : en possedez-vous les droits d'accès ?",
+            "failedToSaveTitle": "Echec de sauvegarde",
+            "failedToSaveText": "Echec de sauvegarde des paramètres",
+            "boardBackgroundColor": "couleur de fond de l'échiquier",
+            "boardCoordinatesColor": "couleur des coordonnées de l'échiquier",
+            "boardLastMoveArrowColor": "couleur de la flèche du dernier coup de l'échiquier",
+            "boardWhiteCellsColor": "couleur des cases blanches de l'échiquier",
+            "boardBlackCellsColor": "couleur des cases noires de l'échiquier",
+            "boardDndStartCellColor": "couleur de début de 'Drag and Drop' de l'échiquier",
+            "boardDndEndCellColor": "couleur de fin de 'Drag and Drop' de l'échiquier",
+            "boardDndSCrossColor": "couleur de la croix de 'Drag and Drop' de l'échiquier",
+            "selectedEngine": "Moteur choisi: ",
+            "noEngine": "aucun",
+            "coordinatesVisible": "Afficher les coordonnées",
+            "lastMoveArrowVisible": "Afficher la flèche du dernier coup",
+            "playerName": "Nom du joueur: ",
+            "computerName": "Nom de l'ordinateur: ",
+            "engineDepth": "Profondeur du moteur"
+        },
+        "promotion": {
+            "title": "Veuillez choisir la pièce de promotion"
+        },
+        "engineCouldNotPlay": {
+            "engineNotSet": {
+                "title": "Echec de lecture du coup du moteur",
+                "text": "Vous devez auparavant choisir un moteur UCI."
+            },
+            "computationError": {
+                "title": "Echec de lecture du coup du moteur",
+                "text": "Erreur diverse : la position est-elle légale et avez-vous réellement chosi un moteur UCI ?"
+            }
+        },
+        "newGame": {
+            "title": "Quitter la partie ?",
+            "text": "Souhaitez-vous vraiment démarrer une nouvelle partie et quitter la partie en cours ?"
+        },
+        "stopGame": {
+            "title": "Quitter la partie ?",
+            "text": "Souhaitez-vous vraiment interrompre la partie en cours ?"
+        },
+        "failedToReadPgn": {
+            "title": "Erreur de lecture du PGN",
+            "text": "Echec de lecture du PGN"
+        },
+        "invalidPgn": {
+            "title": "Erreur de lecture du PGN",
+            "text": "Le PGN est incorrect"
+        },
+        "saveSuccess": {
+            "title": "Partie sauvegardée",
+            "text": "Succès de sauvegarde de la partie"
+        },
+        "saveError": {
+            "title": "Erreur de sauvegarde",
+            "text": "Erreur de sauvegarde de la partie"
+        },
+        "saveClosingError": {
+            "title": "Erreur de fermeture du fichier",
+            "text": "Erreur de fermeture du fichier"
+        },
+        "noGameInPgn": {
+            "title": "Erreur de chargement des parties",
+            "text": "Aucune partie dans le fichier"
+        },
+        "pgnSelection": {
+            "title": "Choisissez la position"
+        }
+    },
+    "game": {
+        "ended": {
+            "checkmate": "{winner} ont gagné par échec et mat.",
+            "stalemate": "Pat.",
+            "perpetualDraw": "Nulle par la triple répétition de position.",
+            "missingMaterial": "Nulle par insuffisance matérielle.",
+            "fiftyMovesRule": "Nulle par la règle des 50 coups."
+        },
+        "side": {
+            "white": "Les Blancs",
+            "black": "Les Noirs"
+        },
+        "status": {
+            "started": "Nouvelle partie démarrée.",
+            "stopped": "Partie courante interrompue.",
+            "already_finished": "Partie déjà terminée."
+        }
+    },
+    "history": {
+        "header": {
+            "moveNumber": "Numéro",
+            "whiteSide": "Blancs",
+            "blackSide": "Noirs"
+        },
+        "buttons": {
+            "first": "Première position",
+            "previous": "Position précédente",
+            "next": "Position suivante",
+            "last": "Dernière position"
+        }
+    },
+    "pgn": {
+        "buttons": {
+            "first": "Première partie",
+            "previous": "Partie précédente",
+            "next": "Prochaine partie",
+            "last": "Dernière partie"
+        }
+    }
+}

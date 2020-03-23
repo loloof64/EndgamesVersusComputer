@@ -1,0 +1,143 @@
+{
+    "menu": {
+        "newGame": {
+            "tooltip": "Empiezar una nueva partida"
+        },
+        "toggleSide": {
+            "tooltip": "Volcarse el lado del tablero de ajedrez"
+        },
+        "stopGame": {
+            "tooltip": "Terminar la corriente partida"
+        },
+        "save": {
+            "tooltip": "Salvaguardar la corriente partida"
+        },
+        "settings": {
+            "tooltip": "Acceder a las configuraciones"
+        }
+    },
+    "app": {
+        "title": "Endgames versus Computer"
+    },
+    "modals": {
+        "global": {
+            "okButton": "De acuerdo",
+            "cancelButton": "Anular"
+        },
+        "settings": {
+            "title": "Configuraciones",
+            "loadDefaults": "Cargar predeterminadas configuraciones",
+            "failedLoadingDefaultSettingsTitle": "Fracasco de la carga de las predeterminadas configuraciones",
+            "failedLoadingDefaultSettingsText": "Fracasco de la carga de las predeterminadas configuraciones",
+            "modifyColor": "Cambiar",
+            "acceptColor": "Acordar",
+            "configureEngine": "Elegir el motor UCI",
+            "failedToSetupEngineTitle": "Fracasco de la seleccion del motor",
+            "failedToSetupEngineText": "Fracasco de la seleccion del motor : tienes derechos para el acceso ?",
+            "failedToSaveTitle": "Fracasco de la salvaguarda",
+            "failedToSaveText": "Fracasco de la salvaguarda de los parametros",
+            "boardBackgroundColor": "color del fondo del tablero",
+            "boardCoordinatesColor": "color de las coordenadas del tablero",
+            "boardLastMoveArrowColor": "color de la flecha del ultimo golpe del tablero",
+            "boardWhiteCellsColor": "color de las casillas blancas del tablero",
+            "boardBlackCellsColor": "color de las casillas negras del tablero",
+            "boardDndStartCellColor": "color del pricipio de arrastrar y soltar del tablero",
+            "boardDndEndCellColor": "color del final de arrastrar y soltar del tablero",
+            "boardDndSCrossColor": "color de la cruz de arrastrat y soltar del tablero",
+            "selectedEngine": "Elegido motor: ",
+            "noEngine": "ninguno",
+            "coordinatesVisible": "Mostrar coordenadas del tablero",
+            "lastMoveArrowVisible": "Mostrar la flecha del utlimo golpe del tablero",
+            "playerName": "Nombre del jugador: ",
+            "computerName": "Nombre del ordenador: ",
+            "engineDepth": "Profundidad del motor"
+        },
+        "promotion": {
+            "title": "Elige la pieza de promocion"
+        },
+        "engineCouldNotPlay": {
+            "engineNotSet": {
+                "title": "Fracasco de la lectura juego del motor",
+                "text": "Olvide eligir el motor UCI"
+            },
+            "computationError": {
+                "title": "Fracasco de la lectura juego del motor",
+                "text": "Una diversa errora ha llegado : la posicion es legal y tambien acaso el eligido motor es un motor UCI ?"
+            }
+        },
+        "newGame": {
+            "title": "Parar este partida ?",
+            "text": "Realmente quiere empezar una nuveva partida y parar esta corriente partida ?"
+        },
+        "stopGame": {
+            "title": "Parar este partida ?",
+            "text": "Realmenter quiere parar esta corriente partida ?"
+        },
+        "failedToReadPgn": {
+            "title": "Error leerando al PGN",
+            "text": "No se puedo leer al PGN"
+        },
+        "invalidPgn": {
+            "title": "Error leerando al PGN",
+            "text": "The PGN es no valido"
+        },
+        "saveSuccess": {
+            "title": "Salvaguardado la partida",
+            "text": "Salvaguardado la partida"
+        },
+        "saveError": {
+            "title": "Error salvaguardando la partida",
+            "text": "Error salvaguardando la partida"
+        },
+        "saveClosingError": {
+            "title": "Error cerrando el archivo",
+            "text": "Error cerrando el archivo"
+        },
+        "noGameInPgn": {
+            "title": "Error de la carga de las partidas",
+            "text": "Ninguna partida en este archivo"
+        },
+        "pgnSelection": {
+            "title": "Elige la posicion"
+        }
+    },
+    "game": {
+        "ended": {
+            "checkmate": "{winner} gana por jaque mate.",
+            "stalemate": "Palmadita.",
+            "perpetualDraw": "Iguales por la repeticion de la position.",
+            "missingMaterial": "Iguales porque no ha suficiente material.",
+            "fiftyMovesRule": "Iguale por la ley de los 50 golpes."
+        },
+        "side": {
+            "white": "Blancos",
+            "black": "Negros"
+        },
+        "status": {
+            "started": "Nueva partida empiezada.",
+            "stopped": "Corriente partida parada.",
+            "already_finished": "Partida ya terminada."
+        }
+    },
+    "history": {
+        "header": {
+            "moveNumber": "Numero",
+            "whiteSide": "Blancos",
+            "blackSide": "Negros"
+        },
+        "buttons": {
+            "first": "Primera posicion",
+            "previous": "Precedente posicion",
+            "next": "Siguiente posicion",
+            "last": "Ultima posicion"
+        }
+    },
+    "pgn": {
+        "buttons": {
+            "first": "Primera parte",
+            "previous": "Precedente parte",
+            "next": "Siguiente parte",
+            "last": "Ultima parte"
+        }
+    }
+}
