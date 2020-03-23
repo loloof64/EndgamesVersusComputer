@@ -1,5 +1,7 @@
 'use strict';
 
+/* eslint-disable */
+
 /*
 Imported from https://github.com/mliebelt/PgnViewerJS
 Adapted by Laurent Bernabe
