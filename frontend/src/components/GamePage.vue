@@ -5,6 +5,7 @@
       size="600"
       :white_player_human="whitePlayerHuman"
       :black_player_human="blackPlayerHuman"
+      :reversed="boardReversed"
     ></loloof64-chessboard>
     <move-history ref="history" :history="history" class="mx-2"></move-history>
   </v-layout>
@@ -67,7 +68,8 @@ export default {
       history: [],
       orderedHistory: [],
       whitePlayerHuman: true,
-      blackPlayerHuman: true
+      blackPlayerHuman: true,
+      boardReversed: undefined,
     };
   },
   components: {

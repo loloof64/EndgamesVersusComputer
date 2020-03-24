@@ -5,6 +5,12 @@
       <toolbar-button :text="$t('menu.newGame.tooltip')" :action="newGameRequest">
         <v-icon>mdi-restart</v-icon>
       </toolbar-button>
+      <toolbar-button :text="$t('menu.toggleSide.tooltip')" :action="toggleSide">
+        <v-icon>mdi-arrow-up-down</v-icon>
+      </toolbar-button>
+      <toolbar-button :text="$t('menu.stopGame.tooltip')" :action="stopGameRequest">
+        <v-icon>mdi-stop-circle</v-icon>
+      </toolbar-button>
     </v-app-bar>
     <v-content>
       <v-container fluid class="px-0">
