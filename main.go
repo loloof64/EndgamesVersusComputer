@@ -13,8 +13,8 @@ func main() {
 	css := mewn.String("./frontend/dist/app.css")
 
 	app := wails.CreateApp(&wails.AppConfig{
-		Width:  900,
-		Height: 600,
+		Width:  1100,
+		Height: 750,
 		Title:  "Endgames versus Computer",
 		JS:     js,
 		CSS:    css,

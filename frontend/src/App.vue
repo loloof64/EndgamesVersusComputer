@@ -11,6 +11,9 @@
       <toolbar-button :text="$t('menu.stopGame.tooltip')" :action="stopGameRequest">
         <v-icon>mdi-stop-circle</v-icon>
       </toolbar-button>
+      <toolbar-button :text="$t('menu.save.tooltip')" :action="showSaveDialog">
+        <v-icon>mdi-content-save</v-icon>
+      </toolbar-button>
     </v-app-bar>
     <v-content>
       <v-container fluid class="px-0">
@@ -43,6 +46,10 @@
           cancelButton
         >
           <v-card-text>{{$t('modals.stopGame.text')}}</v-card-text>
+        </simple-modal-dialog>
+
+        <simple-modal-dialog ref="saveSuccessfulDialog" :title="$t('modals.saveSuccess.title')">
+          <v-card-text>{{$t('modals.saveSuccess.text')}}</v-card-text>
         </simple-modal-dialog>
 
         <simple-snack-bar ref="snackbar">{{ snackBarMessage }}</simple-snack-bar>
@@ -88,8 +95,8 @@ export default {
     },
     doStartNewGame: function() {
       // Production mode, use window.backend.TextFileManager.GetTextFileContent()
-      window.backend.TextFileManager.GetTextFileContentWithPathProviden(
-        "/home/laurent-bernabe/Documents/temp/pgn/lesson01.pgn"
+      window.backend.TextFileManager.GetTextFileContent(
+        
       ).then(content => {
         if (content === "#ErrorReadingFile") {
           this.errorDialogTitle = this.$i18n.t("modals.failedToReadPgn.title");
@@ -217,6 +224,41 @@ export default {
         this.$refs["errorDialog"].open();
       }
     },
+    showSaveDialog: function() {
+      const chessBoard = document.querySelector("loloof64-chessboard");
+      if (chessBoard.gameIsInProgress()) return;
+
+      const historyComponent = this.$refs["gameZone"].$refs["history"];
+      if (!historyComponent.hasData()) return;
+
+      const playerHasWhite = this.$refs["gameZone"].playerHasWhite();
+
+      const whiteName = playerHasWhite
+        ? this.settings.PlayerName
+        : this.settings.ComputerName;
+      const blackName = playerHasWhite
+        ? this.settings.ComputerName
+        : this.settings.PlayerName;
+      const pgn = chessBoard.gamePgn({ whiteName, blackName });
+
+      // Production mode, use window.backend.TextFileManager.SaveTextFile()
+      window.backend.TextFileManager.SaveTextFile(
+        pgn
+      ).then(error => {
+        if (error === "#ErrorSavingFile") {
+          this.errorDialogTitle = this.$i18n.t("modals.saveError.title");
+          this.errorDialogText = this.$i18n.t("modals.saveError.text");
+          this.$refs["errorDialog"].open();
+        } else if (error === "#ErrorClosingFile") {
+          this.errorDialogTitle = this.$i18n.t("modals.saveClosingError.title");
+          this.errorDialogText = this.$i18n.t("modals.saveClosingError.text");
+          this.$refs["errorDialog"].open();
+        } else {
+          this.$refs["saveSuccessfulDialog"].open();
+        }
+      });
+    },
+
   },
 
   components: {
