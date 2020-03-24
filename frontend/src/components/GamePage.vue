@@ -7,9 +7,20 @@
       :black_player_human="blackPlayerHuman"
       :reversed="boardReversed"
       @move_done="addMoveToHistory"
+      @waiting_manual_move="makeComputerMove"
     ></loloof64-chessboard>
-    <move-history ref="history" :history="orderedHistory"
-          @position_requested="setPosition($event)" class="mx-2"></move-history>
+    <move-history
+      ref="history"
+      :history="orderedHistory"
+      @position_requested="setPosition($event)"
+      class="mx-2"
+    ></move-history>
+    <simple-modal-dialog
+      ref="tablebaseError"
+      :title="$t('modals.tableBaseError.title')"
+      :confirmAction="makeComputerMove"
+      cancelButton
+    >{{$t('modals.tableBaseError.text')}}</simple-modal-dialog>
   </v-layout>
 </template>
 
@@ -64,6 +75,9 @@
     */
 
 import MovesHistory from "./MovesHistory";
+import SimpleModalDialog from "./SimpleModalDialog";
+import axios from "axios";
+
 export default {
   data() {
     return {
@@ -71,11 +85,12 @@ export default {
       orderedHistory: [],
       whitePlayerHuman: true,
       blackPlayerHuman: true,
-      boardReversed: undefined,
+      boardReversed: undefined
     };
   },
   components: {
-    "move-history": MovesHistory
+    "move-history": MovesHistory,
+    "simple-modal-dialog": SimpleModalDialog
   },
   methods: {
     newGame: function(startPosition, whitePlayerHuman) {
@@ -124,7 +139,21 @@ export default {
       const gameEndStatusMsg = this.$i18n.t("game.ended.fiftyMovesRule");
       this.$emit("snackbar", gameEndStatusMsg);
     },
-    makeComputerMove: function() {},
+    makeComputerMove: async function() {
+      const board = document.querySelector("loloof64-chessboard");
+      const position = board.getCurrentPosition();
+      try {
+        const requestUrl = `http://tablebase.lichess.ovh/standard?fen=${position}`;
+        const response = await axios.get(requestUrl);
+
+        const moveString = response.data.moves[0].uci;
+        const moveObject = this.convertMoveStringToObject(moveString);
+      } catch (err) {
+          // eslint-disable-next-line
+          console.error(err);
+          this.$refs["tablebaseError"].open();
+      }
+    },
     convertMoveStringToObject: function(moveString) {
       const start = this.convertAlgebraicCellToCoordinates(
         moveString.substring(0, 2)
@@ -214,7 +243,7 @@ export default {
     },
     playerHasWhite: function() {
       return this.whitePlayerHuman;
-    }
+    },
   }
 };
 </script>

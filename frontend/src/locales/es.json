@@ -99,6 +99,10 @@
         },
         "pgnSelection": {
             "title": "Elige la posicion"
+        },
+        "tableBaseError": {
+            "title": "Error en el calculo del golpe",
+            "text": "No puede calcular el golpe con la linea base. (Comproba la conexion internet si se necessita)"
         }
     },
     "game": {

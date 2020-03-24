@@ -99,6 +99,10 @@
         },
         "pgnSelection": {
             "title": "Select the position"
+        },
+        "tableBaseError": {
+            "title": "Error computing move",
+            "text": "Error computing move with the online tablebase. (Check your internet connection if necessary)"
         }
     },
     "game": {

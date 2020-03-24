@@ -99,6 +99,10 @@
         },
         "pgnSelection": {
             "title": "Choisissez la position"
+        },
+        "tableBaseError": {
+            "title": "Erreur de calcul du coup",
+            "text": "Impossible de calculer le coup avec la base en ligne. (Vérifiez votre connexion internet si nécessaire)"
         }
     },
     "game": {
